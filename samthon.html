@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+    <title>SAMTHON</title>
+    <style>
+      *{
+        margin: 0;padding: 0;
+      }
+        body{
+        background-image: url(image.png);
+        height: 100vh;
+        width: 100vw;
+        background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+        }
+        @media(max-width:415px){
+        body{
+          background-image: url(mobileimage.png);
+        height: 100vh;
+        width: 100vw;
+        background-size:contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+          }}
+
+        #audio-player {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;}
+      .password {
+        width: 50px;
+        position: fixed;
+        left: 28vw;
+        top: 34vh;
+        
+      }
+      #pss { 
+        width: 40vw;
+        height: 35px;
+        background-color: black;
+        color: green;
+        outline: green;
+        border: 2px solid black;
+        font-size:35px;
+        border-radius: 10px;
+        
+      }
+      .submit{
+        background-color: black;
+        color: white;
+        border: 2px solid black;
+     position: fixed;
+     bottom:61.4vh ;
+     left: 46.5vw;
+     width: 24px;
+     height: 24px;
+     border-radius: 50%;
+     cursor:pointer;
+
+      }
+      @media(max-width:415px) {
+      .submit {
+        background-color: rgb(118, 49, 49);
+        color: white;
+        border: 4px double  rgb(10, 233, 129);
+     position: fixed;
+     bottom:83.4vh ;
+     left: 45.5vw;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+    
+        }
+       }
+       .nav{
+        background-color: black;
+        color: rgb(107, 12, 12);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 61px;
+        width: 100vw;
+        padding-left: 20px;
+        text-align: center;
+        padding-top: 10px;
+        overflow-x: 0;
+       }
+       ul{
+        list-style: none;
+       }
+    
+
+.footer{
+  background-color: black;
+  color:rgb(107, 12, 12) ;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 62px;
+  width: 100vw;
+  text-align: center;
+  overflow-x: 0;
+}
+    
+      
+
+
+
+      
+    
+
+    </style>
+</head>
+<body>
+    <audio id="audio-player" autoplay loop>
+        <source src="dark.mp3" type="audio/mpeg">
+        
+      </audio>
+
+      
+
+
+    
+    
+      <div class="password">
+        <form action="https://www.instagram.com/sam_thon.py" ></form>
+        <input type="password" name="pss" id="pss" class="pss" >
+        <input type="submit" name="submit" id="submit" class="submit" value="">
+      </div>
+      <div class="nav">
+        
+         <h3>Dont dare to stalk,if not user!!!! &#128128</h3>
+        
+      </div>
+      <div class="footer">
+         <h3>I am watching you &#129488 </h3>
+        
+      </div>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Get the form and submit button elements
+        var form = document.querySelector('.password form');
+        var submitBtn = document.getElementById('submit');
+  
+        // Add a click event listener to the submit button
+        submitBtn.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent default form submission
+  
+          // Get the password input value
+          var password = document.getElementById('pss').value;
+  
+          // Check if the password matches 'khansami'
+          if (password === 'khansami') {
+            // Redirect to the action URL of the form
+            window.location.href = form.getAttribute('action');
+          } else {
+            alert('if not the user, donot try again '); // Optional: Alert if password is incorrect
+          }
+        });
+      });
+    </script>
+  
+    
+    
+
+</body>
+</html>
